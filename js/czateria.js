@@ -4,7 +4,6 @@ function podstawy(){
     document.getElementById('mainHeader').remove();                                                     //usun naglowek
     document.getElementById('m-tab-main-container-1').style.height = '100%'                             //rozciagnij okno rozmowy na cala wysokosc 
 }
-
 podstawy()
 
 //wybierz wezel obserwacji  - w tym wypadku okno rozmowy
@@ -17,8 +16,8 @@ const config = { childList: true, subtree: true };
 const callback = function(mutationsList, observer) {
     for(let mutation of mutationsList) {                                                                //dla kazdej mutacji wezla "okno wiadomosci"
         if (mutation.type === 'childList') {                                                            //jezeli dodana zostala nowa wiadomosc                                                            
-            if(mutation.addedNodes[0].className == 'm-msg-item accosted m-msg-item--me'){               //jezeli klasa wiadomosci ode mnie z uzyciem mojego nicka
-                console.log('Moje wiadosci uwzgledniajace mnie');                                       //wiadomosc testowa w konsoli
+            if(mutation.addedNodes[0].className == 'm-msg-item accosted'){                              //jezeli klasa wiadomosci ode mnie z uzyciem mojego nicka
+                console.log('Wiadomosc do mnie :)');                                                    //wiadomosc testowa w konsoli
                 let url = chrome.runtime.getURL('note.mp3');                                            //uzyskaj dostep do pliku note.mp3                                                           
 	            let a = new Audio(url);
 	            a.play();                                                                               //odtworz plik                                                                                   
