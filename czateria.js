@@ -3,6 +3,7 @@ function podstawy(){
     document.getElementsByClassName('floatbox-box-background')[0].style.background = '#2c2c2c';         //zmien kolor tla na szary
     document.getElementById('mainHeader').remove();                                                     //usun naglowek
     document.getElementById('m-tab-main-container-1').style.height = '100%'                             //rozciagnij okno rozmowy na cala wysokosc 
+    document.getElementsByClassName('video-player-container')[0].remove();                              //wyrzuc video playera
 }
 
 podstawy()
