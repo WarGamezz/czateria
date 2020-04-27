@@ -3,6 +3,8 @@
   "name": "CzateriaMod",
   "version": "0.1",
   "description": "CzateriaMod by Stephanov",
+  "author": "Stephanov",
+  
   "background": {
       "persistent": true,
       "scripts": ["js/background.js"]
@@ -11,6 +13,12 @@
        "contextMenus",
        "activeTab"
      ],
+	  
+	 
+	"web_accessible_resources": [
+		"note.mp3"
+	],
+	
   "icons": {
        "16": "icons/icon16x16.png",
        "48": "icons/icon48x48.png",
