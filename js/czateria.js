@@ -12,6 +12,7 @@ function podstawy(){
     for (i = 0; i < uzytkownicy.length; i++) {
         if(uzytkownicy[i].getAttribute("data-perm") == '0'){
             uzytkownicy[i].className = 'm-list-user-item ignored' 
+            uzytkownicy[i].remove();
         }
     }
 }   
@@ -36,7 +37,8 @@ const callback = function(mutationsList, observer) {
             var i;
             for (i = 0; i < uzytkownicy.length; i++) {
                 if(uzytkownicy[i].getAttribute("data-perm") == '0'){
-                    uzytkownicy[i].className = 'm-list-user-item ignored' 
+                    uzytkownicy[i].className = 'm-list-user-item ignored';
+                    uzytkownicy[i].remove();
                 }
             }
             if(mutation.addedNodes[0].className == 'm-msg-item accosted'){                              //jezeli klasa wiadomosci ode mnie z uzyciem mojego nicka
